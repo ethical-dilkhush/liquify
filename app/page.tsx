@@ -31,7 +31,7 @@ export default function Home() {
       // Get existing history
       let history = []
       try {
-        const existing = localStorage.getItem('liquify-history')
+        const existing = localStorage.getItem('goatoweenfy-history')
         if (existing) {
           history = JSON.parse(existing)
           console.log('Loaded existing history:', history.length, 'items')
@@ -55,10 +55,10 @@ export default function Home() {
       })))
       
       // Save to localStorage
-      localStorage.setItem('liquify-history', JSON.stringify(limitedHistory))
+      localStorage.setItem('goatoweenfy-history', JSON.stringify(limitedHistory))
       
       // Verify save
-      const verification = localStorage.getItem('liquify-history')
+      const verification = localStorage.getItem('goatoweenfy-history')
       const verified = verification ? JSON.parse(verification) : []
       console.log('Verification - saved items:', verified.length)
       
@@ -161,7 +161,7 @@ export default function Home() {
     try {
       const link = document.createElement('a')
       link.href = imageUrl
-      link.download = `liquified_${filename}`
+      link.download = `goatoweenfied_${filename}`
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
@@ -176,7 +176,7 @@ export default function Home() {
       handleDownload(imageUrl, filename)
       
       // Then open Twitter with pre-filled text
-      const text = encodeURIComponent("I just transformed my image into Liquify art using @liquifydotworld ! ✨")
+      const text = encodeURIComponent("I just transformed my image into Goatoweenfy art using @goatoweenfy ! ✨")
       const twitterUrl = `https://twitter.com/intent/tweet?text=${text}`
       window.open(twitterUrl, '_blank')
     } catch (error) {
@@ -209,22 +209,32 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-[#162F29] text-white">
-      <div className="container mx-auto px-4 py-16">
+    <div className="relative min-h-screen text-white">
+      {/* Background Image */}
+      <div 
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/goato.webp)' }}
+      >
+        {/* Optional dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
+
+      {/* Main content container */}
+      <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <img 
               src="/liq.webp" 
-              alt="Liquify Logo" 
-              className="w-12 h-12 object-contain"
+              alt="Goatoweenfy Logo" 
+              className="w-12 h-12 object-contain border-1 border-white rounded-lg p-1"
             />
-            <h1 className="text-5xl font-bold text-white">
-              Liquification
+            <h1 className="text-4xl font-bold text-white">
+              Goatoweenfication
             </h1>
           </div>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Transform your images into stunning liquid art using AI-powered image generation
+            Transform your images into stunning Goatoweenfy art.
           </p>
         </div>
 
@@ -236,7 +246,7 @@ export default function Home() {
                 <Upload className="w-5 h-5 text-white" />
                 Upload Image
               </CardTitle>
-              <CardDescription className="text-white/70">Choose an image to transform into liquid art</CardDescription>
+              <CardDescription className="text-white/70">Choose an image to transform into Halloween art</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               {/* Drag & Drop Area */}
@@ -328,7 +338,7 @@ export default function Home() {
                 {loading ? (
                   <div className="flex items-center gap-2">
                     <div className="w-4 h-4 border-2 border-[#162F29]/30 border-t-[#162F29] rounded-full animate-spin" />
-                    Liquifying...
+                    Goatoweenfying...
                   </div>
                 ) : (
                   <div className="flex items-center gap-2">
@@ -345,15 +355,15 @@ export default function Home() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-white">
                 <Sparkles className="w-5 h-5 text-white" />
-                Liquified Result
+                Goatoweenfied Result
               </CardTitle>
-              <CardDescription className="text-white/70">Your transformed liquid art will appear here</CardDescription>
+              <CardDescription className="text-white/70">Your transformed Halloween art will appear here</CardDescription>
             </CardHeader>
             <CardContent>
               {result ? (
                 <div className="space-y-4">
                   <div className="relative rounded-lg overflow-hidden border-2 border-white/30">
-                    <img src={result || "/placeholder.svg"} alt="Liquified result" className="w-full h-auto" />
+                    <img src={result || "/placeholder.svg"} alt="Goatoweenfied result" className="w-full h-auto" />
                   </div>
                   <div className="flex gap-2">
                     <Button
@@ -378,7 +388,7 @@ export default function Home() {
                 <div className="flex items-center justify-center h-64 border-2 border-dashed border-white/30 rounded-lg">
                   <div className="text-center text-white/60">
                     <Image className="w-16 h-16 mx-auto mb-2 opacity-50" />
-                    <p>Your liquified image will appear here</p>
+                    <p>Your goatoweenfied image will appear here</p>
                   </div>
                 </div>
               )}
@@ -402,14 +412,14 @@ export default function Home() {
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-semibold text-white">Transform</h3>
-              <p className="text-white/70 text-sm">AI creates a liquid art version</p>
+              <p className="text-white/70 text-sm">Goatoweenfy creates a Goatoweenfication art version</p>
             </div>
             <div className="space-y-3 card-animate">
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto">
                 <Download className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-semibold text-white">Download</h3>
-              <p className="text-white/70 text-sm">Get your stunning liquid artwork</p>
+              <p className="text-white/70 text-sm">Get your stunning Goatoweenfy artwork</p>
             </div>
           </div>
         </div>

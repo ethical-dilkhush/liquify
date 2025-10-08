@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex justify-center">
           {/* Copyright */}
           <div className="text-white/60 text-xs sm:text-sm">
-            © 2025 Liquify. All rights reserved.
+            © 2025 Goatoweenfy. All rights reserved.
           </div>
         </div>
       </div>

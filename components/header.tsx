@@ -35,11 +35,11 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3">
             <img 
               src="/liq.webp" 
-              alt="Liquify Logo" 
-              className="w-8 h-8 object-contain"
+              alt="Goatoweenfy Logo" 
+              className="w-8 h-8 object-contain border-1 border-white rounded-lg p-1"
             />
             <h1 className="text-2xl font-bold text-white">
-              Liquify
+              Goatoweenfy
             </h1>
           </Link>
 
@@ -64,7 +64,7 @@ export default function Header() {
               Share
             </button>
             <Link 
-              href="https://x.com/liquifydotworld" 
+              href="https://x.com/goatoweenfy" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-white/80 hover:text-white transition-colors"
@@ -119,7 +119,7 @@ export default function Header() {
                 Share
               </button>
               <Link 
-                href="https://x.com/liquifydotworld" 
+                href="https://x.com/goatoweenfy" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block text-white/80 hover:text-white transition-colors py-2"
@@ -148,7 +148,7 @@ export default function Header() {
             <DialogHeader>
               <DialogTitle className="text-white text-lg sm:text-xl">Contract Address</DialogTitle>
               <DialogDescription className="text-white/70 text-sm sm:text-base">
-                Copy the contract address for Liquify token
+                Copy the contract address for Goatoweenfy token
               </DialogDescription>
             </DialogHeader>
             

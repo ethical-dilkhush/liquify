@@ -29,7 +29,7 @@ export default function ShareModal({ isOpen, onClose }: ShareModalProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="bg-[#2A4A3F] border-[#2A4A3F] text-white w-[95vw] max-w-md mx-auto">
         <DialogHeader>
-          <DialogTitle className="text-white text-lg sm:text-xl">Share Liquify</DialogTitle>
+          <DialogTitle className="text-white text-lg sm:text-xl">Share Goatoweenfy</DialogTitle>
           <DialogDescription className="text-white/70 text-sm sm:text-base">
             Share this amazing AI-powered image transformation tool with others
           </DialogDescription>

@@ -22,7 +22,7 @@ export default function HistoryModal({ isOpen, onClose }: HistoryModalProps) {
 
   const loadHistory = () => {
     try {
-      const savedHistory = localStorage.getItem('liquify-history')
+      const savedHistory = localStorage.getItem('goatoweenfy-history')
       if (savedHistory) {
         const parsedHistory = JSON.parse(savedHistory)
         const sortedHistory = parsedHistory.sort((a: TransformHistory, b: TransformHistory) => b.timestamp - a.timestamp)
@@ -55,7 +55,7 @@ export default function HistoryModal({ isOpen, onClose }: HistoryModalProps) {
   const handleDownload = (resultUrl: string, originalName: string) => {
     const link = document.createElement('a')
     link.href = resultUrl
-    link.download = `liquified_${originalName}`
+    link.download = `goatoweenfied_${originalName}`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -66,14 +66,14 @@ export default function HistoryModal({ isOpen, onClose }: HistoryModalProps) {
     setHistory(updatedHistory)
     
     // Update localStorage
-    const allHistory = JSON.parse(localStorage.getItem('liquify-history') || '[]')
+    const allHistory = JSON.parse(localStorage.getItem('goatoweenfy-history') || '[]')
     const filteredHistory = allHistory.filter((item: TransformHistory) => item.id !== id)
-    localStorage.setItem('liquify-history', JSON.stringify(filteredHistory))
+    localStorage.setItem('goatoweenfy-history', JSON.stringify(filteredHistory))
   }
 
   const clearAllHistory = () => {
     setHistory([])
-    localStorage.removeItem('liquify-history')
+    localStorage.removeItem('goatoweenfy-history')
   }
 
   const formatDate = (timestamp: number) => {
@@ -131,7 +131,7 @@ export default function HistoryModal({ isOpen, onClose }: HistoryModalProps) {
                     <div className="relative">
                       <img
                         src={item.resultUrl}
-                        alt={`Liquified ${item.originalName}`}
+                        alt={`Goatoweenfied ${item.originalName}`}
                         className="w-full h-24 sm:h-32 object-cover rounded-lg"
                       />
                     </div>

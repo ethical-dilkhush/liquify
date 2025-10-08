@@ -7,8 +7,8 @@ import Footer from '@/components/footer'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Liquify',
-  description: 'Transform your images into stunning liquid art using AI-powered image generation',
+  title: 'Goatoweenfy',
+  description: 'Transform your images into stunning Halloween art using AI-powered image generation',
   generator: 'v0.app',
   icons: {
     icon: '/liq.webp',
