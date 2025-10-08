@@ -16,7 +16,7 @@ export default function Header() {
   const [isContractModalOpen, setIsContractModalOpen] = useState(false)
   const [copied, setCopied] = useState(false)
   
-  const contractAddress = "Adding ca after token launch" // Replace with actual contract address
+  const contractAddress = "HEGgENJBP2WAbyAKNzLnr41HUBucDBjfFcMWgPy5pump" // Replace with actual contract address
 
   const handleCopy = async () => {
     try {
