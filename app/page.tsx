@@ -234,7 +234,7 @@ export default function Home() {
             </h1>
           </div>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Transform your images into stunning Goatoweenfy art.
+          🎃 Let’s Celebrate This Halloween With Goatoween Vibes | Morph Into Your Creepy Goat Persona | Genrate Your Identity With GoatoweenFy | Unleash The Madness.
           </p>
         </div>
 
